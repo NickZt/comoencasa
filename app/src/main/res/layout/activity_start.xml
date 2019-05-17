@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
+
+<!--
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="408dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="256dp"
+        android:contentDescription="@string/description"
+        app:srcCompat="@drawable/rsz_breakfast" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="408dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginEnd="136dp"
+        android:contentDescription="@string/description"
+        app:srcCompat="@drawable/rsz_breakfast" />
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="408dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/description"
+        app:srcCompat="@drawable/rsz_breakfast" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:textColor="@color/warm_grey"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="6sp"
+        android:layout_marginBottom="382dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="259dp"
+        android:text="Entradas" />
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:textColor="@color/warm_grey"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="6sp"
+        android:layout_marginBottom="382dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="139dp"
+        android:text="Principal" />
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:textColor="@color/warm_grey"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="6sp"
+        android:layout_marginBottom="382dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginEnd="16dp"
+        android:text="Postres" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textColor="@color/warm_grey"
+        android:lineSpacingExtra="8sp"
+        android:layout_marginBottom="512dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="88dp"
+        android:text="@string/recetas_por_comida" />
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_start" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+-->
+
+</android.support.design.widget.CoordinatorLayout>
