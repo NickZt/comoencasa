@@ -16,6 +16,7 @@ limitations under the License.
 package org.tensorflow.lite.examples.classification.tflite;
 
 import android.app.Activity;
+
 import java.io.IOException;
 
 /** This TensorFlowLite classifier works with the float MobileNet model. */
@@ -52,7 +53,9 @@ public class ClassifierFloatMobileNet extends Classifier {
     // you can download this file from
     // see build.gradle for where to obtain this file. It should be auto
     // downloaded into assets.
-    return "mobilenet_v1_1.0_224.tflite";
+    //return "mobilenet_v1_1.0_224.tflite";
+    //return "mobilenet_v1_1.0_224_frozen.tflite";
+    return "model.tflite";
 
   }
 
@@ -66,10 +69,19 @@ public class ClassifierFloatMobileNet extends Classifier {
 
   @Override
   protected void addPixelValue(int pixelValue) {
+    /*
     imgData.putFloat(((pixelValue >> 16) & 0xFF) / 255.f);
     imgData.putFloat(((pixelValue >> 8) & 0xFF) / 255.f);
     imgData.putFloat((pixelValue & 0xFF) / 255.f);
-    }
+    */
+    //Log.v("pixelvalue",Float.toString(pixelValue));
+    imgData.putFloat(((pixelValue >> 16) & 0xFF));
+    imgData.putFloat(((pixelValue >> 8) & 0xFF));
+    imgData.putFloat((pixelValue & 0xFF));
+
+
+
+  }
 
   @Override
   protected float getProbability(int labelIndex) {
