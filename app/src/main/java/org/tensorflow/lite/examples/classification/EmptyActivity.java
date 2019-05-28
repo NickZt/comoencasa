@@ -1,6 +1,6 @@
 package org.tensorflow.lite.examples.classification;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class EmptyActivity extends AppCompatActivity {

@@ -115,4 +115,5 @@
     <string name="todo">TODO</string>
     <string name="alimentos_e">Alimentos encontrados</string>
     <string name="tomate">tomate</string>
+    <string name="title_activity_foods_found_camera">FoodsFoundCameraActivity</string>
 </resources>

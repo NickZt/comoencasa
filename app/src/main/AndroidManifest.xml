@@ -14,8 +14,6 @@
         android:label="Como en Casa"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NutricionalInfoActivity"></activity>
-        <activity android:name=".RecipeActivity" />
         <activity android:name=".PresentationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".FoodsFoundCameraActivity"
+            android:label="@string/title_activity_foods_found_camera"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".NutricionalInfoActivity" />
+        <activity android:name=".RecipeActivity" />
         <activity android:name=".EmptyActivity" />
         <activity
             android:name=".StartActivity"

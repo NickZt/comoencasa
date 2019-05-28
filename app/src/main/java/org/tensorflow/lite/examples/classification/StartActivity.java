@@ -1,18 +1,50 @@
 package org.tensorflow.lite.examples.classification;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.widget.ListView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import java.util.ArrayList;
 
 public class StartActivity extends AppCompatActivity {
+
+    ListView list;
+    //AdapterClass adapter;
+    SearchView editsearch;
+    String[] searchQueries;
+    ArrayList<SearchQuery> arraylist = new ArrayList<SearchQuery>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+        searchQueries = new String[] {
+                "TextView", "ListView", "SearchView", "RatingBar", "ToolBar", "Button", "EditText",
+                "ToggleButton", "ImageView", "SlidingDrawer", "Android"};
+
+        list = findViewById(R.id.list_view);
+        for (String searchQuery:searchQueries) {
+            SearchQuery searchQuery1 = new SearchQuery(searchQuery);
+            // Binds all strings into an array
+            arraylist.add(searchQuery1);
+        }
+
+        //adapter = new AdapterClass(this, arraylist);
+        //list.setAdapter(adapter);
+        editsearch = findViewById(R.id.search_view);
+        editsearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                String text = newText;
+                //adapter.filter(text);
+                return false;
+            }
+        });
 
         /*
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -29,4 +61,21 @@ public class StartActivity extends AppCompatActivity {
         */
     }
 
+}
+
+class SearchQuery {
+
+    public String getQuery() {
+        return query;
+    }
+
+    public void setQuery(String query) {
+        this.query = query;
+    }
+
+    private String query;
+
+    public SearchQuery(String query) {
+        this.query = query;
+    }
 }

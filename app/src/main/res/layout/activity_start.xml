@@ -1,128 +1,478 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:backgroundTintMode="add"
     tools:context=".StartActivity">
 
-<!--
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="408dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="256dp"
-        android:contentDescription="@string/description"
-        app:srcCompat="@drawable/rsz_breakfast" />
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="408dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginEnd="136dp"
-        android:contentDescription="@string/description"
-        app:srcCompat="@drawable/rsz_breakfast" />
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="408dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginStart="256dp"
-        android:layout_marginEnd="16dp"
-        android:contentDescription="@string/description"
-        app:srcCompat="@drawable/rsz_breakfast" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:fontFamily="sans-serif-medium"
-        android:textStyle="normal"
-        android:textColor="@color/warm_grey"
-        android:letterSpacing="0.01"
-        android:lineSpacingExtra="6sp"
-        android:layout_marginBottom="382dp"
-        android:layout_marginTop="232dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginEnd="259dp"
-        android:text="Entradas" />
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:fontFamily="sans-serif-medium"
-        android:textStyle="normal"
-        android:textColor="@color/warm_grey"
-        android:letterSpacing="0.01"
-        android:lineSpacingExtra="6sp"
-        android:layout_marginBottom="382dp"
-        android:layout_marginTop="232dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginEnd="139dp"
-        android:text="Principal" />
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:fontFamily="sans-serif-medium"
-        android:textStyle="normal"
-        android:textColor="@color/warm_grey"
-        android:letterSpacing="0.01"
-        android:lineSpacingExtra="6sp"
-        android:layout_marginBottom="382dp"
-        android:layout_marginTop="232dp"
-        android:layout_marginStart="256dp"
-        android:layout_marginEnd="16dp"
-        android:text="Postres" />
-
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:fontFamily="sans-serif"
-        android:textStyle="normal"
-        android:textColor="@color/warm_grey"
-        android:lineSpacingExtra="8sp"
-        android:layout_marginBottom="512dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="88dp"
-        android:text="@string/recetas_por_comida" />
-
-    <android.support.design.widget.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/linear_layout_border_shadow"
+            android:orientation="vertical">
 
-    </android.support.design.widget.AppBarLayout>
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryHint="Búsqueda" />
+        </LinearLayout>
 
-    <include layout="@layout/content_start" />
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
--->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
 
-</android.support.design.widget.CoordinatorLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:fontFamily="sans-serif-black"
+                android:text="Por comida"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#373640"
+                android:textSize="32sp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/white"
+                android:drawableEnd="@drawable/chevron_right"
+                android:drawablePadding="10dp"
+                android:text="Ver más"
+                android:textAllCaps="false"
+                android:textColor="#707070" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            style="@style/GrayTextColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/entradas_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Entradas"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="(12)"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/entradas_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Principal"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="(25)"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/entradas_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Postres"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="(10)"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:fontFamily="sans-serif-black"
+                android:text="Recetas"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#373640"
+                android:textSize="32sp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/white"
+                android:drawableEnd="@drawable/chevron_right"
+                android:drawablePadding="10dp"
+                android:text="Ver más"
+                android:textAllCaps="false"
+                android:textColor="#707070" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/entradas_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Filet de merluza a la romana"
+                    android:textColor="#707070"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/schedule_icon"
+                    android:text=" 60 min"
+                    android:textColor="#707070"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/calorias_icon"
+                    android:text=" 457 calorías"
+                    android:textColor="#707070"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/entradas_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Camarones"
+                    android:textColor="#707070"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/schedule_icon"
+                    android:text=" 90 min"
+                    android:textColor="#707070"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/calorias_icon"
+                    android:text=" 337 calorías"
+                    android:textColor="#707070"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/entradas_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ensalada César"
+                    android:textColor="#707070"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/schedule_icon"
+                    android:text=" 25 min"
+                    android:textColor="#707070"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/calorias_icon"
+                    android:text=" 650 calorías"
+                    android:textColor="#707070"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buttonshape"
+            android:src="@drawable/camera_icon" />
+
+    </LinearLayout>
+
+    <!--<ImageView-->
+    <!--android:id="@+id/imageView2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="408dp"-->
+    <!--android:layout_marginTop="144dp"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:layout_marginEnd="256dp"-->
+    <!--android:contentDescription="@string/description"-->
+    <!--app:srcCompat="@drawable/rsz_breakfast" />-->
+    <!--<ImageView-->
+    <!--android:id="@+id/imageView3"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="408dp"-->
+    <!--android:layout_marginTop="144dp"-->
+    <!--android:layout_marginStart="136dp"-->
+    <!--android:layout_marginEnd="136dp"-->
+    <!--android:contentDescription="@string/description"-->
+    <!--app:srcCompat="@drawable/rsz_breakfast" />-->
+    <!--<ImageView-->
+    <!--android:id="@+id/imageView4"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="408dp"-->
+    <!--android:layout_marginTop="144dp"-->
+    <!--android:layout_marginStart="256dp"-->
+    <!--android:layout_marginEnd="16dp"-->
+    <!--android:contentDescription="@string/description"-->
+    <!--app:srcCompat="@drawable/rsz_breakfast" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView5"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="20sp"-->
+    <!--android:fontFamily="sans-serif-medium"-->
+    <!--android:textStyle="normal"-->
+    <!--android:textColor="@color/warm_grey"-->
+    <!--android:letterSpacing="0.01"-->
+    <!--android:lineSpacingExtra="6sp"-->
+    <!--android:layout_marginBottom="382dp"-->
+    <!--android:layout_marginTop="232dp"-->
+    <!--android:layout_marginStart="19dp"-->
+    <!--android:layout_marginEnd="259dp"-->
+    <!--android:text="Entradas" />-->
+    <!--<TextView-->
+    <!--android:id="@+id/textView6"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="20sp"-->
+    <!--android:fontFamily="sans-serif-medium"-->
+    <!--android:textStyle="normal"-->
+    <!--android:textColor="@color/warm_grey"-->
+    <!--android:letterSpacing="0.01"-->
+    <!--android:lineSpacingExtra="6sp"-->
+    <!--android:layout_marginBottom="382dp"-->
+    <!--android:layout_marginTop="232dp"-->
+    <!--android:layout_marginStart="140dp"-->
+    <!--android:layout_marginEnd="139dp"-->
+    <!--android:text="Principal" />-->
+    <!--<TextView-->
+    <!--android:id="@+id/textView7"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="20sp"-->
+    <!--android:fontFamily="sans-serif-medium"-->
+    <!--android:textStyle="normal"-->
+    <!--android:textColor="@color/warm_grey"-->
+    <!--android:letterSpacing="0.01"-->
+    <!--android:lineSpacingExtra="6sp"-->
+    <!--android:layout_marginBottom="382dp"-->
+    <!--android:layout_marginTop="232dp"-->
+    <!--android:layout_marginStart="256dp"-->
+    <!--android:layout_marginEnd="16dp"-->
+    <!--android:text="Postres" />-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView4"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="24sp"-->
+    <!--android:fontFamily="sans-serif"-->
+    <!--android:textStyle="normal"-->
+    <!--android:textColor="@color/warm_grey"-->
+    <!--android:lineSpacingExtra="8sp"-->
+    <!--android:layout_marginBottom="512dp"-->
+    <!--android:layout_marginTop="96dp"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:layout_marginEnd="88dp"-->
+    <!--android:text="@string/recetas_por_comida" />-->
+
+    <!--<android.support.design.widget.AppBarLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:theme="@style/AppTheme.AppBarOverlay">-->
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize"-->
+    <!--android:background="?attr/colorPrimary"-->
+    <!--app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <!--<include layout="@layout/content_start" />-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+    <!--android:id="@+id/fab"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom|end"-->
+    <!--android:layout_margin="@dimen/fab_margin"-->
+    <!--app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
