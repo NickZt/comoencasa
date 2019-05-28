@@ -34,7 +34,7 @@ import org.tensorflow.lite.examples.classification.env.BorderedText;
 import org.tensorflow.lite.examples.classification.env.ImageUtils;
 import org.tensorflow.lite.examples.classification.env.Logger;
 import org.tensorflow.lite.examples.classification.tflite.Classifier;
-import org.tensorflow.lite.examples.classification.tflite.ClassifierQuantizedMobileNet;
+import org.tensorflow.lite.examples.classification.tflite.ClassifierFloatMobileNet;
 
 import java.io.IOException;
 import java.util.List;
@@ -84,7 +84,9 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
     borderedText.setTypeface(Typeface.MONOSPACE);
 
     try {
-      classifier = new ClassifierQuantizedMobileNet(this);
+        //classifier = new ClassifierQuantizedMobileNet(this);
+        classifier = new ClassifierFloatMobileNet(this);
+
     } catch (IOException e) {
       LOGGER.e(e, "Failed to load classifier.");
       return;

@@ -1,9 +1,13 @@
 package org.tensorflow.lite.examples.classification;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+
 import java.util.ArrayList;
 
 public class StartActivity extends AppCompatActivity {
@@ -44,6 +48,13 @@ public class StartActivity extends AppCompatActivity {
                 //adapter.filter(text);
                 return false;
             }
+        });
+
+        //Camera button
+        View cameraButton = findViewById(R.id.cameraButtonView);
+        cameraButton.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ClassifierActivity.class);
+            startActivity(intent);
         });
 
         /*

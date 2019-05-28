@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="org.tensorflow.lite.examples.classification">
 
     <uses-sdk />
@@ -13,13 +14,9 @@
         android:allowBackup="true"
         android:label="Como en Casa"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".PresentationActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".FoodsFoundCameraActivity"
@@ -27,12 +24,16 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".NutricionalInfoActivity" />
+
         <activity android:name=".RecipeActivity" />
         <activity android:name=".EmptyActivity" />
-        <activity
-            android:name=".StartActivity"
-            android:label="@string/title_activity_start"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".StartActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
         <activity android:name=".RecipeByIngredientActivity" />
         <activity android:name=".RecipeByCategoryActivity" />
         <activity

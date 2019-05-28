@@ -1,9 +1,10 @@
 package org.tensorflow.lite.examples.classification;
 
 import android.content.Intent;
-import android.os.Handler;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class PresentationActivity extends AppCompatActivity {
     private static int TIME_OUT = 2000;
