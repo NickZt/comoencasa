@@ -1,9 +1,13 @@
 package org.tensorflow.lite.examples.classification;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 public class StartActivity extends AppCompatActivity {
@@ -12,7 +16,8 @@ public class StartActivity extends AppCompatActivity {
     //AdapterClass adapter;
     SearchView editsearch;
     String[] searchQueries;
-    ArrayList<SearchQuery> arraylist = new ArrayList<SearchQuery>();
+    ArrayList<SearchQuery> arraylist;
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,17 +27,20 @@ public class StartActivity extends AppCompatActivity {
         searchQueries = new String[] {
                 "TextView", "ListView", "SearchView", "RatingBar", "ToolBar", "Button", "EditText",
                 "ToggleButton", "ImageView", "SlidingDrawer", "Android"};
+        arraylist = new ArrayList<>();
 
         list = findViewById(R.id.list_view);
-        for (String searchQuery:searchQueries) {
-            SearchQuery searchQuery1 = new SearchQuery(searchQuery);
+        editsearch = findViewById(R.id.search_view);
+        fab = findViewById(R.id.floatingActionButton);
+
+        for (String strSearchQuery:searchQueries) {
+            SearchQuery searchQuery = new SearchQuery(strSearchQuery);
             // Binds all strings into an array
-            arraylist.add(searchQuery1);
+            arraylist.add(searchQuery);
         }
 
         //adapter = new AdapterClass(this, arraylist);
         //list.setAdapter(adapter);
-        editsearch = findViewById(R.id.search_view);
         editsearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -44,6 +52,10 @@ public class StartActivity extends AppCompatActivity {
                 //adapter.filter(text);
                 return false;
             }
+        });
+
+        fab.setOnClickListener(view -> {
+            // Dario: Agregar comportamiento
         });
 
         /*
