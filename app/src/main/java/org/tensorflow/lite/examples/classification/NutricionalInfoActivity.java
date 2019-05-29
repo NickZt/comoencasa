@@ -1,10 +1,11 @@
 package org.tensorflow.lite.examples.classification;
 
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class NutricionalInfoActivity extends AppCompatActivity {
 
@@ -25,7 +26,7 @@ public class NutricionalInfoActivity extends AppCompatActivity {
                 Log.v("Ingredient match info",Utils.ingredientList[i]);
                 imageViewNutricionalInfo.setImageResource(Utils.imageResouceIdNuticionalInfoList[i]);
                 imageViewNutricionalInfo.setOnClickListener(v -> {
-                    Intent intent = new Intent(this, ScrollingActivity.class);
+                    Intent intent = new Intent(this, StartActivity.class);
                     startActivity(intent);});
             }
         }
