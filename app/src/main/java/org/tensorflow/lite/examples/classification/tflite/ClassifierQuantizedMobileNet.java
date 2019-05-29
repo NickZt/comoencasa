@@ -41,23 +41,20 @@ public class ClassifierQuantizedMobileNet extends Classifier {
   @Override
   public int getImageSizeX() {
     return 224;
-    //return 416;
   }
 
   @Override
   public int getImageSizeY() {
     return 224;
-
-    //return 416;
-  }
+}
 
   @Override
   protected String getModelPath() {
     // you can download this file from
     // see build.gradle for where to obtain this file. It should be auto
     // downloaded into assets.
-    return "mobilenet_v1_1.0_224_quant.tflite";
-    //return "model_quant.tflite";
+    //return "mobilenet_v1_1.0_224_quant.tflite";
+    return "model_quant.tflite";
   }
 
   @Override

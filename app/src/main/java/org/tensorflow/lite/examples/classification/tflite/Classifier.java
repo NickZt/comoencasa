@@ -158,6 +158,7 @@ public abstract class Classifier {
                 * getNumBytesPerChannel());
     imgData.order(ByteOrder.nativeOrder());
 
+
     Log.d(TAG, "Created a Tensorflow Lite Image Classifier.");
   }
 

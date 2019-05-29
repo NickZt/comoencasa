@@ -1,11 +1,11 @@
 package org.tensorflow.lite.examples.classification;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -55,7 +55,8 @@ public class StartActivity extends AppCompatActivity {
         });
 
         fab.setOnClickListener(view -> {
-            // Dario: Agregar comportamiento
+            Intent intent = new Intent(this, ClassifierActivity.class);
+            startActivity(intent);
         });
 
         /*
