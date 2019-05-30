@@ -2,7 +2,6 @@ package org.tensorflow.lite.examples.classification;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -12,11 +11,11 @@ import java.util.ArrayList;
 
 public class StartActivity extends AppCompatActivity {
 
-    ListView list;
+//    ListView list;
     //AdapterClass adapter;
     SearchView editsearch;
-    String[] searchQueries;
-    ArrayList<SearchQuery> arraylist;
+//    String[] searchQueries;
+//    ArrayList<SearchQuery> arraylist;
     FloatingActionButton fab;
 
     @Override
@@ -24,20 +23,20 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        searchQueries = new String[] {
-                "TextView", "ListView", "SearchView", "RatingBar", "ToolBar", "Button", "EditText",
-                "ToggleButton", "ImageView", "SlidingDrawer", "Android"};
-        arraylist = new ArrayList<>();
+//        searchQueries = new String[] {
+//                "TextView", "ListView", "SearchView", "RatingBar", "ToolBar", "Button", "EditText",
+//                "ToggleButton", "ImageView", "SlidingDrawer", "Android"};
+//        arraylist = new ArrayList<>();
 
-        list = findViewById(R.id.list_view);
+//        list = findViewById(R.id.list_view);
         editsearch = findViewById(R.id.search_view);
         fab = findViewById(R.id.floatingActionButton);
 
-        for (String strSearchQuery:searchQueries) {
-            SearchQuery searchQuery = new SearchQuery(strSearchQuery);
-            // Binds all strings into an array
-            arraylist.add(searchQuery);
-        }
+//        for (String strSearchQuery:searchQueries) {
+//            SearchQuery searchQuery = new SearchQuery(strSearchQuery);
+//            // Binds all strings into an array
+//            arraylist.add(searchQuery);
+//        }
 
         //adapter = new AdapterClass(this, arraylist);
         //list.setAdapter(adapter);
@@ -73,22 +72,21 @@ public class StartActivity extends AppCompatActivity {
         });
         */
     }
-
 }
 
-class SearchQuery {
-
-    public String getQuery() {
-        return query;
-    }
-
-    public void setQuery(String query) {
-        this.query = query;
-    }
-
-    private String query;
-
-    public SearchQuery(String query) {
-        this.query = query;
-    }
-}
+//class SearchQuery {
+//
+//    public String getQuery() {
+//        return query;
+//    }
+//
+//    public void setQuery(String query) {
+//        this.query = query;
+//    }
+//
+//    private String query;
+//
+//    public SearchQuery(String query) {
+//        this.query = query;
+//    }
+//}
