@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    app:cardCornerRadius="25dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:background="@drawable/gradient_card_selector">
+
+        <ToggleButton
+            android:id="@+id/btnfavorite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/toggle_favorite"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/txtRecipeLength1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/schedule_icon"
+            android:drawableTint="@color/white"
+            android:text=" 60 min"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_below="@id/titleTextView"
+            android:paddingTop="40dp"/>
+
+        <TextView
+            android:id="@+id/txtRecipeCalories1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/calorias_icon"
+            android:drawableTint="@color/white"
+            android:text=" 457 calorías"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_below="@+id/txtRecipeLength1"
+            android:layout_marginBottom="20dp"/>
+
+        <ImageView
+            android:id="@+id/imgViewRecipe1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/food_icon"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="24dp"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center">-->
+
+        <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="8dp"-->
+        <!--android:layout_margin="8dp"-->
+        <!--android:tint="@android:color/white"-->
+        <!--android:src="@drawable/camera_icon"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center">-->
+
+        <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="8dp"-->
+        <!--android:layout_margin="8dp"-->
+        <!--android:tint="@android:color/white"-->
+        <!--android:src="@drawable/camera_icon"/>-->
+        <!--</LinearLayout>-->
+
+        <!--</LinearLayout>-->
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

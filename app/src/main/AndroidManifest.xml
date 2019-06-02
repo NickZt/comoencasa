@@ -16,24 +16,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".PresentationActivity">
+        <activity android:name=".MenuActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name=".SuggestedRecipesActivity">
+        </activity>
+        <activity android:name=".PresentationActivity" />
         <activity
             android:name=".FoodsFoundCameraActivity"
             android:label="@string/title_activity_foods_found_camera"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".NutricionalInfoActivity" />
-
         <activity android:name=".RecipeActivity" />
         <activity android:name=".EmptyActivity" />
         <activity android:name=".StartActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
-
         <activity android:name=".RecipeByIngredientActivity" />
         <activity android:name=".RecipeByCategoryActivity" />
         <activity
