@@ -19,7 +19,7 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
 
         searchView = findViewById(R.id.search_view);
-        fab = findViewById(R.id.floatingActionButton);
+        fab = findViewById(R.id.fbtnCamera);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

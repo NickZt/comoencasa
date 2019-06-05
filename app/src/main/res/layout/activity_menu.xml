@@ -30,7 +30,16 @@
         android:id="@+id/btnFoodsFound"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:background="@color/darkish_green"
         android:backgroundTint="@color/darkish_green"
         android:text="Foods found" />
+
+    <Button
+        android:id="@+id/btnRecipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkish_green"
+        android:backgroundTint="@color/darkish_green"
+        android:text="Recipe" />
 </LinearLayout>

@@ -19,7 +19,7 @@
             android:id="@+id/btnfavorite"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/toggle_favorite"
+            android:background="@drawable/toggle_favorite_white_border"
             android:checked="false"
             android:text=""
             android:textOff=""
@@ -28,7 +28,7 @@
             android:layout_alignParentRight="true"/>
 
         <TextView
-            android:id="@+id/titleTextView"
+            android:id="@+id/txtTitle"
             style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             android:textSize="26sp" />
 
         <TextView
-            android:id="@+id/txtRecipeLength1"
+            android:id="@+id/txtRecipeLength"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -50,11 +50,11 @@
             android:text=" 60 min"
             android:textColor="#fff"
             android:textSize="20sp"
-            android:layout_below="@id/titleTextView"
+            android:layout_below="@id/txtTitle"
             android:paddingTop="40dp"/>
 
         <TextView
-            android:id="@+id/txtRecipeCalories1"
+            android:id="@+id/txtRecipeCalories"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -63,11 +63,11 @@
             android:text=" 457 calorías"
             android:textColor="#fff"
             android:textSize="20sp"
-            android:layout_below="@+id/txtRecipeLength1"
+            android:layout_below="@+id/txtRecipeLength"
             android:layout_marginBottom="20dp"/>
 
         <ImageView
-            android:id="@+id/imgViewRecipe1"
+            android:id="@+id/imgRecipe"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
@@ -75,44 +75,6 @@
             app:srcCompat="@drawable/food_icon"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"/>
-
-        <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="24dp"-->
-        <!--android:orientation="horizontal">-->
-
-        <!--<LinearLayout-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:gravity="center">-->
-
-        <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:padding="8dp"-->
-        <!--android:layout_margin="8dp"-->
-        <!--android:tint="@android:color/white"-->
-        <!--android:src="@drawable/camera_icon"/>-->
-        <!--</LinearLayout>-->
-
-        <!--<LinearLayout-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:gravity="center">-->
-
-        <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:padding="8dp"-->
-        <!--android:layout_margin="8dp"-->
-        <!--android:tint="@android:color/white"-->
-        <!--android:src="@drawable/camera_icon"/>-->
-        <!--</LinearLayout>-->
-
-        <!--</LinearLayout>-->
 
     </RelativeLayout>
 

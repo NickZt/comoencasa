@@ -78,7 +78,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imgViewGroup1"
+                    android:id="@+id/imgGroup1"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -113,7 +113,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imgViewGroup2"
+                    android:id="@+id/imgGroup2"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -148,7 +148,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imgViewGroup3"
+                    android:id="@+id/imgGroup3"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -230,7 +230,7 @@
                 android:paddingRight="15dp">
 
                 <ImageView
-                    android:id="@+id/imgViewRecipe1"
+                    android:id="@+id/imgRecipe1"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -279,7 +279,7 @@
                 android:paddingRight="15dp">
 
                 <ImageView
-                    android:id="@+id/imgViewRecipe2"
+                    android:id="@+id/imgRecipe2"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -328,7 +328,7 @@
                 android:paddingRight="15dp">
 
                 <ImageView
-                    android:id="@+id/imgViewRecipe3"
+                    android:id="@+id/imgRecipe3"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -372,7 +372,7 @@
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/fbtnCamera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"

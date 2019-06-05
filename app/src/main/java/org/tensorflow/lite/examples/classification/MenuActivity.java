@@ -30,5 +30,11 @@ public class MenuActivity extends AppCompatActivity {
             Intent i = new Intent(MenuActivity.this, FoodsFoundCameraActivity.class);
             startActivity(i);
         });
+
+        Button btnRecipe = findViewById(R.id.btnRecipe);
+        btnRecipe.setOnClickListener(v -> {
+            Intent i = new Intent(MenuActivity.this, RecipeActivity.class);
+            startActivity(i);
+        });
     }
 }
