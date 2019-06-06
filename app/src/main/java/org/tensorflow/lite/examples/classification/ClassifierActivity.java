@@ -163,12 +163,16 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
                 new Runnable() {
                   @Override
                   public void run() {
+                    Log.v("RESULTS", String.valueOf(results));
+                    showResultsInBottomSheetStatic(results);
+                    /*
                     showResultsInBottomSheet(results);
                     showFrameInfo(previewWidth + "x" + previewHeight);
                     showCropInfo(cropCopyBitmap.getWidth() + "x" + cropCopyBitmap.getHeight());
                     showCameraResolution(canvas.getWidth() + "x" + canvas.getHeight());
                     showRotationInfo(String.valueOf(sensorOrientation));
                     showInference(lastProcessingTimeMs + "ms");
+                    */
                   }
                 });
 

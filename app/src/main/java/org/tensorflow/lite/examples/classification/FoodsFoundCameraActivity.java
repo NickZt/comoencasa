@@ -1,15 +1,17 @@
 package org.tensorflow.lite.examples.classification;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
-import androidx.appcompat.app.AppCompatActivity;
-import android.view.LayoutInflater;
 
 public class FoodsFoundCameraActivity extends AppCompatActivity {
 
     ChipGroup chipGroup;
-    String[] foods = {"Tomate", "Zucchini", "Ajo", "Berenjena", "Zanahoria", "Cebolla", "Lechuga"};
+    String[] foods = {"PPPP", "Zucchini", "Ajo", "Berenjena", "Zanahoria", "Cebolla", "Lechuga"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

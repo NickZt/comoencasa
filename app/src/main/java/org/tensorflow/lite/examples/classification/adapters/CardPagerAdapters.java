@@ -79,7 +79,7 @@ public class CardPagerAdapters extends PagerAdapter implements CardAdapter {
     }
 
     private void bind(CardItemString item, View view) {
-        TextView titleTextView = view.findViewById(R.id.titleTextView);
+        TextView titleTextView = view.findViewById(R.id.txtTitle);
         titleTextView.setText(item.getTitle());
     }
 

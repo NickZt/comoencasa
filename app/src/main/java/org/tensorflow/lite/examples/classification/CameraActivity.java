@@ -36,6 +36,7 @@ import android.os.HandlerThread;
 import android.os.Trace;
 import android.util.Log;
 import android.util.Size;
+import android.view.LayoutInflater;
 import android.view.Surface;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -53,12 +54,15 @@ import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
 
 import org.tensorflow.lite.examples.classification.env.ImageUtils;
 import org.tensorflow.lite.examples.classification.env.Logger;
 import org.tensorflow.lite.examples.classification.tflite.Classifier.Recognition;
 
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class CameraActivity extends AppCompatActivity
@@ -104,6 +108,7 @@ public abstract class CameraActivity extends AppCompatActivity
   private ImageView plusImageView, minusImageView;
   private SwitchCompat apiSwitchCompat;
   private TextView threadsTextView;
+  private ArrayList<String> ingredients = new ArrayList<>();
 
   @Override
   protected void onCreate(final Bundle savedInstanceState) {
@@ -525,6 +530,37 @@ public abstract class CameraActivity extends AppCompatActivity
     return out;
 
   }
+  @UiThread
+  protected void showResultsInBottomSheetStatic(List<Recognition> results) {
+
+    ChipGroup chipGroup;
+    chipGroup = findViewById(R.id.foodChipGroup);
+    LayoutInflater inflater = LayoutInflater.from(CameraActivity.this);
+    String ingredient = null;
+    if (results != null && results.size() >= 3) {
+      Recognition recognitionS1 = results.get(0);
+      if (recognitionS1 != null) {
+        if (!ingredients.contains(recognitionS1.getTitle()) && recognitionS1.getTitle() != null) {
+            ingredient = recognitionS1.getTitle();
+            ingredients.add(ingredient);
+
+            Chip chip = (Chip)inflater.inflate(R.layout.food_chip_item, null, false);
+            chip.setText(ingredient);
+            chip.setOnCloseIconClickListener(v -> {
+              ingredients.remove((String) chip.getText());
+              chipGroup.removeView(chip);
+            });
+            chipGroup.addView(chip);
+
+        }
+      }
+    }
+
+
+
+  }
+
+
   @UiThread
   protected void showResultsInBottomSheet(List<Recognition> results) {
     if (results != null && results.size() >= 3) {
