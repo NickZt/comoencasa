@@ -540,7 +540,8 @@ public abstract class CameraActivity extends AppCompatActivity
     if (results != null && results.size() >= 3) {
       Recognition recognitionS1 = results.get(0);
       if (recognitionS1 != null) {
-        if (!ingredients.contains(recognitionS1.getTitle()) && recognitionS1.getTitle() != null) {
+        if (!ingredients.contains(recognitionS1.getTitle()) && recognitionS1.getTitle() != null &&
+                recognitionS1.getConfidence() > 0.5) {
             ingredient = recognitionS1.getTitle();
             ingredients.add(ingredient);
 

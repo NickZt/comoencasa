@@ -11,8 +11,9 @@ public class RecipeByCategoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recipe_by_category);
 
 
-        /*
 
+
+        /*
 
         FeedReaderDbHelper dbHelper = new FeedReaderDbHelper(getApplicationContext());
 

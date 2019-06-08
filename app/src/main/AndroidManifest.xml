@@ -31,7 +31,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".NutricionalInfoActivity" />
         <activity android:name=".RecipeActivity" />
-        <activity android:name=".EmptyActivity" />
         <activity android:name=".StartActivity">
         </activity>
         <activity android:name=".RecipeByIngredientActivity" />
