@@ -105,6 +105,8 @@ public class StartActivity extends AppCompatActivity {
 
         ArrayList<String> recipesName = new ArrayList<>();
         ArrayList<String> recipesTime = new ArrayList<>();
+        ArrayList<Integer> recipesID = new ArrayList<>();
+
 
         while(cursor.moveToNext()) {
             String  recipeName = cursor.getString(
@@ -113,6 +115,9 @@ public class StartActivity extends AppCompatActivity {
             String  recipeTime = cursor.getString(
                     cursor.getColumnIndexOrThrow(FeedReaderContract.FeedEntry.COLUMN_NAME_RECIPE_TIME));
             recipesTime.add(recipeTime);
+            Integer  recipeID = cursor.getInt(
+                    cursor.getColumnIndexOrThrow(FeedReaderContract.FeedEntry._ID));
+            recipesID.add(recipeID);
 
         }
         cursor.close();
@@ -166,6 +171,7 @@ public class StartActivity extends AppCompatActivity {
             String  recipeCalorie = cursor2.getString(
                     cursor2.getColumnIndexOrThrow(FeedReaderContract.FeedEntry.COLUMN_NAME_RECIPE_INFO_CALORIES));
             recipesCalorie.add(recipeCalorie);
+
         }
         cursor2.close();
 
@@ -183,6 +189,9 @@ public class StartActivity extends AppCompatActivity {
         imgRecipe1.setOnClickListener(view -> {
             Intent intent = new Intent(this, RecipeActivity.class);
             intent.putExtra("recipe",recipe1);
+            intent.putExtra("recipe_calorie",recipesCalorie.get(0));
+            intent.putExtra("recipe_id",recipesID.get(0));
+
             startActivity(intent);
         });
 
@@ -190,12 +199,16 @@ public class StartActivity extends AppCompatActivity {
         imgRecipe2.setOnClickListener(view -> {
             Intent intent = new Intent(this, RecipeActivity.class);
             intent.putExtra("recipe",recipe2);
+            intent.putExtra("recipe_calorie",recipesCalorie.get(1));
+            intent.putExtra("recipe_id",recipesID.get(1).toString());
             startActivity(intent);
         });
         ImageView imgRecipe3 = findViewById(R.id.imgRecipe3);
         imgRecipe3.setOnClickListener(view -> {
             Intent intent = new Intent(this, RecipeActivity.class);
             intent.putExtra("recipe",recipe3);
+            intent.putExtra("recipe_calorie",recipesCalorie.get(2));
+            intent.putExtra("recipe_id",recipesID.get(2));
             startActivity(intent);
         });
 
