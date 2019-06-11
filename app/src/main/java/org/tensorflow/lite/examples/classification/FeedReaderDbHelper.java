@@ -61,11 +61,11 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
 
 
         //read RECIPE inputStream
-        CSVReader csvReader = new CSVReader(recipe_is);
+        CustomCSVReader customCsvReader = new CustomCSVReader(recipe_is);
         try {
             List<String[]> rows;
 
-            rows = csvReader.readCSV();
+            rows = customCsvReader.readCSV();
 
             for (String[] row:rows){
                 ContentValues values = new ContentValues();
@@ -85,11 +85,11 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         }
 
         //read INGREDIENT inputStream
-        csvReader = new CSVReader(ingredient_is);
+        customCsvReader = new CustomCSVReader(ingredient_is);
         try {
             List<String[]> rows;
 
-            rows = csvReader.readCSV();
+            rows = customCsvReader.readCSV();
 
             for (String[] row:rows){
                 ContentValues values = new ContentValues();
@@ -107,11 +107,11 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         }
 
         //read STEPS inputStream
-        csvReader = new CSVReader(step_is);
+        customCsvReader = new CustomCSVReader(step_is);
         try {
             List<String[]> rows;
 
-            rows = csvReader.readCSV();
+            rows = customCsvReader.readCSV();
 
             for (String[] row:rows){
                 ContentValues values = new ContentValues();
@@ -129,11 +129,11 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         }
 
         //read INFO inputStream
-        csvReader = new CSVReader(info_is);
+        customCsvReader = new CustomCSVReader(info_is);
         try {
             List<String[]> rows;
 
-            rows = csvReader.readCSV();
+            rows = customCsvReader.readCSV();
 
             for (String[] row:rows){
                 ContentValues values = new ContentValues();
