@@ -39,7 +39,16 @@
         android:id="@+id/btnRecipe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:background="@color/darkish_green"
         android:backgroundTint="@color/darkish_green"
         android:text="Recipe" />
+
+    <Button
+        android:id="@+id/btnNutritionalInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkish_green"
+        android:backgroundTint="@color/darkish_green"
+        android:text="Nutritional information" />
 </LinearLayout>

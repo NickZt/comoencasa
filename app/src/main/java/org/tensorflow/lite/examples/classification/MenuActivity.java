@@ -36,5 +36,12 @@ public class MenuActivity extends AppCompatActivity {
             Intent i = new Intent(MenuActivity.this, RecipeActivity.class);
             startActivity(i);
         });
+
+        Button btnNutritionalInfo = findViewById(R.id.btnNutritionalInfo);
+        btnNutritionalInfo.setOnClickListener(v -> {
+            Intent i = new Intent(MenuActivity.this, NutritionalInfoActivity.class);
+            startActivity(i);
+        });
+
     }
 }
