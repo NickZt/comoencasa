@@ -46,7 +46,7 @@
             android:layout_marginTop="16dp"></com.google.android.material.chip.ChipGroup>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/ButtonFindRecipes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"

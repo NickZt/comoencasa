@@ -1,23 +1,34 @@
 package org.tensorflow.lite.examples.classification;
 
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.viewpager.widget.ViewPager;
-
-import android.content.Context;
-import android.os.Bundle;
 
 import org.tensorflow.lite.examples.classification.adapters.CardItemString;
 import org.tensorflow.lite.examples.classification.adapters.CardPagerAdapters;
 import org.tensorflow.lite.examples.classification.utils.ShadowTransformer;
 
-public class SuggestedRecipesActivity extends AppCompatActivity {
+public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
 
     private SearchView searchView;
     private ViewPager mViewPager;
 
     private CardPagerAdapters mCardAdapter;
     private ShadowTransformer mCardShadowTransformer;
+
+
+
+
+
+
+
+
+
 
     String titlesText [] = {"Bocaditos de coliflor", " Time Table 1", " Time Table 2", " Time Table 3", " Time Table 4", " Time Table 5",
             " Time Table 6", " Time Table 7", " Time Table 8", " Time Table 9"};
@@ -56,5 +67,22 @@ public class SuggestedRecipesActivity extends AppCompatActivity {
         mViewPager.setAdapter(mCardAdapter);
         mViewPager.setPageTransformer(false, mCardShadowTransformer);
         mViewPager.setOffscreenPageLimit(3);
+
+
+        //Get Intent data
+        Intent intentIngredients = getIntent();
+        String ingredients = intentIngredients.getStringExtra("ingredients");
+        Log.v("INGREDIENTS OBTAINED",ingredients);
+
+        //Search recipes with ingredients
+        //TODO
+        //TODO
+        //TODO
+        //TODO
+        //TODO
+
+
+
+
     }
 }

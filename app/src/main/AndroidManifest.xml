@@ -30,11 +30,8 @@
             android:name=".FoodsFoundCameraActivity"
             android:label="@string/title_activity_foods_found_camera"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".NutricionalInfoActivity" />
         <activity android:name=".RecipeActivity" />
         <activity android:name=".StartActivity"></activity>
-        <activity android:name=".RecipeByIngredientActivity" />
-        <activity android:name=".RecipeByCategoryActivity" />
         <activity
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling"

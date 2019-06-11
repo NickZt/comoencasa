@@ -49,6 +49,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/infoSize"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="10dp"
@@ -81,6 +82,7 @@
                     android:textSize="16sp" />
             </RelativeLayout>
 
+            <!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,7 +103,7 @@
                     android:text="1799kj"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -144,6 +146,7 @@
                     android:textSize="16sp" />
             </RelativeLayout>
 
+            <!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -164,7 +167,8 @@
                     android:text="57.1g"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            -->
+            <!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -185,7 +189,7 @@
                     android:text="9.2g"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -248,7 +252,7 @@
                     android:text="2.6g"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            <!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -269,7 +273,8 @@
                     android:text="9.1g"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            -->
+            <!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -290,7 +295,8 @@
                     android:text="2.1g"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            -->
+            <!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -311,7 +317,7 @@
                     android:text="7.0g"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -332,7 +338,7 @@
                     android:text="0.0g"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            <!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -353,7 +359,7 @@
                     android:text="19mg"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -374,7 +380,7 @@
                     android:text="346mg"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            <!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -395,7 +401,8 @@
                     android:text="0.86g"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            -->
+            <!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -416,7 +423,8 @@
                     android:text="614iu"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            -->
+            <!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -437,7 +445,7 @@
                     android:text="57.6mg"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -458,7 +466,7 @@
                     android:text="60mg"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            <!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -479,7 +487,8 @@
                     android:text="3.86mg"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            -->
+            <!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -500,7 +509,7 @@
                     android:text="900mg"
                     android:textSize="16sp" />
             </RelativeLayout>
-
+            -->
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

@@ -178,5 +178,15 @@ public class RecipeActivity extends AppCompatActivity {
 
 
 
+        //Link to nutricional information
+        TextView txtNutricionalInfo = findViewById(R.id.txtNutricionalInfo);
+        txtNutricionalInfo.setOnClickListener(view -> {
+            Intent intent = new Intent(this, NutritionalInfoActivity.class);
+            intent.putExtra("recipe",recipe);
+            startActivity(intent);
+        });
+
+
+
     }
 }

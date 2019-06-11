@@ -531,7 +531,7 @@ public abstract class CameraActivity extends AppCompatActivity
 
   }
   @UiThread
-  protected void showResultsInBottomSheetStatic(List<Recognition> results) {
+  protected ArrayList<String> showResultsInBottomSheetStatic(List<Recognition> results) {
 
     ChipGroup chipGroup;
     chipGroup = findViewById(R.id.foodChipGroup);
@@ -556,7 +556,7 @@ public abstract class CameraActivity extends AppCompatActivity
         }
       }
     }
-
+    return ingredients;
 
 
   }

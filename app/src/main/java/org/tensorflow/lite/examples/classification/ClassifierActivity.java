@@ -37,6 +37,7 @@ import org.tensorflow.lite.examples.classification.tflite.Classifier;
 import org.tensorflow.lite.examples.classification.tflite.ClassifierFloatMobileNet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClassifierActivity extends CameraActivity implements OnImageAvailableListener {
@@ -53,7 +54,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
   private Matrix frameToCropTransform;
   private Matrix cropToFrameTransform;
   private BorderedText borderedText;
-
+  private ArrayList<String> ingredients = new ArrayList<>();
 
   public List<Classifier.Recognition> results = null;
 
@@ -120,22 +121,30 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
   @Override
   protected void processImage() {
 
-      Button button1 = findViewById(R.id.button);
+      Button ButtonFindRecipes = findViewById(R.id.ButtonFindRecipes);
+
+      /*
       if (results != null && results.size() >= 1) {
           Classifier.Recognition recognition = results.get(0);
           if (recognition != null) {
               if (recognition.getTitle() != null){
                   String ingredient = recognition.getTitle();
                   Log.d("ingredient",ingredient);
-                  button1.setOnClickListener(view -> {
-                      Intent intent = new Intent(this, RecipeByIngredientActivity.class);
-                      intent.putExtra("ingredient", ingredient);
-                      startActivity(intent);
-                  });
 
               }
           }
       }
+      */
+      ButtonFindRecipes.setOnClickListener(view -> {
+          Intent intent = new Intent(this, SuggestedRecipesActivity.class);
+          intent.putExtra("ingredients", ingredients.toString());
+          Log.v("INGREDIENTS DETECTED",ingredients.toString());
+          startActivity(intent);
+      });
+
+
+
+
 
 
       if (classifier == null) {
@@ -164,7 +173,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
                   @Override
                   public void run() {
                     Log.v("RESULTS", String.valueOf(results));
-                    showResultsInBottomSheetStatic(results);
+                    ingredients = showResultsInBottomSheetStatic(results);
                     /*
                     showResultsInBottomSheet(results);
                     showFrameInfo(previewWidth + "x" + previewHeight);
