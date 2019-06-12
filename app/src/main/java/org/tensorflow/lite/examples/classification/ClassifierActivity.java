@@ -137,7 +137,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
       */
       ButtonFindRecipes.setOnClickListener(view -> {
           Intent intent = new Intent(this, SuggestedRecipesActivity.class);
-          intent.putExtra("ingredients", ingredients.toString());
+          intent.putStringArrayListExtra("ingredients", ingredients);
           Log.v("INGREDIENTS DETECTED",ingredients.toString());
           startActivity(intent);
       });
