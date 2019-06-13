@@ -3,6 +3,7 @@ package org.tensorflow.lite.examples.classification.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -80,7 +81,14 @@ public class CardPagerAdapters extends PagerAdapter implements CardAdapter {
 
     private void bind(CardItemString item, View view) {
         TextView titleTextView = view.findViewById(R.id.txtTitle);
+        TextView caloriesTextView = view.findViewById(R.id.txtRecipeCalories);
+        TextView lengthTextView = view.findViewById(R.id.txtRecipeLength);
+        ImageView photoImageView = view.findViewById(R.id.imgRecipe);
+
         titleTextView.setText(item.getTitle());
+        caloriesTextView.setText(item.getCalories());
+        lengthTextView.setText(item.getLength());
+        photoImageView.setImageResource(item.getPhoto());
     }
 
 }

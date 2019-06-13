@@ -27,15 +27,6 @@ public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
     private CardPagerAdapters mCardAdapter;
     private ShadowTransformer mCardShadowTransformer;
 
-
-
-
-
-
-
-
-
-
     String titlesText [] = {};
 
     private Context context;
@@ -146,10 +137,6 @@ public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
             }
             cursor2.close();
 
-
-
-
-
             Integer  ingredientCount = cursor.getInt(
                     cursor.getColumnIndexOrThrow("c"));
             ingredientsCount.add(ingredientCount);
@@ -160,8 +147,6 @@ public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
         Log.v("RECIPES",recipesName.toString());
         Log.v("RECIPES TIME",recipesTime.toString());
         Log.v("RECIPES CAL",recipesCalorie.toString());
-
-
 
 
         ///Populate slider
@@ -185,14 +170,12 @@ public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
         titlesText = Arrays.copyOf(recipesName.toArray(), recipesName.toArray().length, String[].class);
 
         for (int i=0; i<titlesText.length; i++){
-            mCardAdapter.addCardItemS(new CardItemString( titlesText[i]));
+            mCardAdapter.addCardItemS(
+                    new CardItemString(titlesText[i], "calories", "length", 1)
+            );
 
-            //PABLO COMO EDITO LA CANTIDAD DE CALORIAS Y EL TIEMPO DE COCCION Y LA IMAGEN DE LA RECETA PARA CADA SLIDE
-            //PABLO COMO EDITO LA CANTIDAD DE CALORIAS Y EL TIEMPO DE COCCION Y LA IMAGEN DE LA RECETA PARA CADA SLIDE
-            //PABLO COMO EDITO LA CANTIDAD DE CALORIAS Y EL TIEMPO DE COCCION Y LA IMAGEN DE LA RECETA PARA CADA SLIDE
-
-
-
+            //DARÍO: AHÍ DEJÉ EL CONSTRUCTOR PARA QUE RECIBA DOS STRINGS (por las dudas) Y UN INT:
+            //Calorías, duración y el int del id de recurso del drawable correspondiente.
         }
 
         mCardShadowTransformer = new ShadowTransformer(mViewPager, mCardAdapter);
