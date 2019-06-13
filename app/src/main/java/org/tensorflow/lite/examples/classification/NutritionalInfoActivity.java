@@ -149,6 +149,8 @@ public class NutritionalInfoActivity extends AppCompatActivity {
         txtCalciumValue.setText(nutricionalInfo.get(1));
 
 
+        db.close();
+
     }
 
 

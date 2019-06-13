@@ -187,6 +187,7 @@ public class RecipeActivity extends AppCompatActivity {
         });
 
 
+        db.close();
 
     }
 }

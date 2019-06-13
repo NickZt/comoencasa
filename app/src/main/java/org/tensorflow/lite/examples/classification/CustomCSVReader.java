@@ -20,7 +20,7 @@ public class CustomCSVReader {
         InputStreamReader isr = new InputStreamReader(is);
         BufferedReader br = new BufferedReader(isr);
         String line;
-        String csvSplitBy = ",";
+        String csvSplitBy = "\t";
 
         br.readLine();
 

@@ -56,10 +56,10 @@ public class StartActivity extends AppCompatActivity {
         //Insert records if table RECIPE is empty
         if(dbHelper.isTableEmpty(FeedReaderContract.FeedEntry.TABLE_NAME_RECIPE)){
             try{
-                InputStream recipe_is = getAssets().open(FeedReaderContract.FeedEntry.RECIPE_CSV);
-                InputStream ingredient_is = getAssets().open(FeedReaderContract.FeedEntry.INGREDIENT_CSV);
-                InputStream step_is = getAssets().open(FeedReaderContract.FeedEntry.STEP_CSV);
-                InputStream recipe_info_is = getAssets().open(FeedReaderContract.FeedEntry.RECIPE_INFO_CSV);
+                InputStream recipe_is = getAssets().open(FeedReaderContract.FeedEntry.RECIPE_TSV);
+                InputStream ingredient_is = getAssets().open(FeedReaderContract.FeedEntry.INGREDIENT_TSV);
+                InputStream step_is = getAssets().open(FeedReaderContract.FeedEntry.STEP_TSV);
+                InputStream recipe_info_is = getAssets().open(FeedReaderContract.FeedEntry.RECIPE_INFO_TSV);
 
                 dbHelper.onInsert(db,recipe_is, ingredient_is,step_is,recipe_info_is);
             }catch (IOException e){
@@ -212,7 +212,7 @@ public class StartActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-
+        db.close();
 
     }
 }

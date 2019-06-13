@@ -88,10 +88,10 @@ public final class FeedReaderContract {
         public static final String SQL_DELETE_RECIPE_INFO =
                 "DROP TABLE IF EXISTS " + FeedEntry.TABLE_NAME_RECIPE_INFO;
 
-        public static final String RECIPE_CSV = "recetas.csv";
-        public static final String INGREDIENT_CSV = "ingredientes.csv";
-        public static final String STEP_CSV = "pasos.csv";
-        public static final String RECIPE_INFO_CSV = "info_nutricional.csv";
+        public static final String RECIPE_TSV = "recetas.tsv";
+        public static final String INGREDIENT_TSV = "ingredientes.tsv";
+        public static final String STEP_TSV = "pasos.tsv";
+        public static final String RECIPE_INFO_TSV = "info_nutricional.tsv";
 
 
     }

@@ -1,0 +1,31 @@
+receta.id	receta.nombre	receta.descripcion	receta.tiempo_de_preparacion	receta.tipo_de_comida
+1	Bastoncitos con mayonesa de zanahoria	Perfectos para compartir en familia.	45	entrada
+2	Tortitas de zapallito y cebolla	Nutritivas y sabrosas tortitas. Para cualquier momento del dia.	30	entrada
+3	Papas sorpresa	¡Una forma más divertida de comer! ¿Por que comer solo una papa, si podes ponerle deliciosos vegetales asados?	60	entrada
+4	Pasta al brócoli	Una forma mas nutritiva de comer pasta	40	principal
+5	Napolitanas de berenjena	Deliciosas milanesas horneadas con suave salsa de tomates y  muzzarella derretida. 	60	principal
+6	Fajitas Veggie	Una variante vegetariana de las clasicas fajitas	60	principal
+7	Helado rápido de banana	Saludable, rapido ¡y con los ingredientes que tenes en tu casa!	15	postre
+8	Gelatina frutal	Un giro para la clásica y aburrida gelatina. ¡Ahora llena de vitaminas y minerales!	20	postre
+9	Paletas frutales	Excelente forma de refrescarse en verano ¡mientras incorporamos de vitaminas!	20	postre
+10	Veggie Nuggets 	Perfectos para una merienda salada, estos Nuggets con zanahoria y brócoli, ¡vienen a revolucionar tu forma de comer vegetales!	40	entrada
+11	Pinchos Caprese	Faciles y rapidos, perfectos para cualquier reunion familiar.	5	entrada
+12	Tomates rellenos	Frescos y saludables, estos tomatesrellenos con arroz y atun, ¡te van a encantar!	45	entrada
+13	Librito de papa y zanahoria	Sencillo plato con los ingredientes que tenes en tu casa.	45	entrada
+14	Croquetas de calabaza	Deliciosas croquetas de calabaza y queso	45	entrada
+15	Rollitos de pollo con guacamole	Rollitos de pollo con crema de palta, cebolla, tomate y limon. ¡Delicioso!	60	entrada
+16	Buñuelos de hojas verdes	Rapidos buñuelos que podes hacer hasta con las hojas que te sobran de lla remolacha.	30	entrada
+17	Risotto multicolor	Los tiempos del arroz aburrido quedaron en el pasado,¡ preparate para volverte fan de este cereal!	60	principal
+18	Tarta de pollo y calabaza	Una opcion para llevar a donde desees.	45	principal
+19	Pizza Veggie	Una variante vegetariana de pizza, llena de vegetales y nutrientes.	60	principal
+20	Torre de crepes de remolacha	Atractiva torre morada de crepes	60	principal
+21	Zapallitos rellenos	Clasicos zapallitos rellenos con carne picada y queso	45	principal
+22	Omellette nutritivo	Variacion del clasico omellette, y... ¡aun mas lleno de nutrientes!	20	principal
+23	Milamburguesa de arroz y vegetales	Hamburguesas apanadas de arroz y vegetales.	45	principal
+24	Crepes de fruta fresca	Postre ideal para cuando tenes visita.	60	postre
+25	Pinchos coloridos	Faciles de preparar... ¡y podes combinarlos como quieras!	10	postre
+26	Smoothie 	Delicioso y saludable batido frozen. ¡Combina como mas te guste!	15	postre
+27	Helado de yogur y frutos rojos	Perfecto para días calurosos 	20	postre
+28	Galletitas de banana	Deliciosas galletitas de banana y avena ¡Súper fáciles!	20	postre
+29	Pudin de chia	Novedoso postre para disfrutar	15	postre
+30	Flan de manzana sin huevo	Una forma distinta de presentar exquisitas frutas	40	postre

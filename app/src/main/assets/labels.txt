@@ -1,12 +1,28 @@
 aceituna
 acelga
+ajo
+alcuacil
+anana
 apio
 banana
 batata
+berenjena
+brocoli
 cebolla
 coco
 coll de brusela
+durazno
+frambuesa
 frutilla
+habas
+higo
+hinojo
+kale
+kiwi
+lechuga
+lima
+limon
+mandarina
 mango
 manzana roja
 manzana verde
@@ -18,6 +34,7 @@ morron rojo
 naranja
 nuez
 palta
+papa negra
 pepino
 pera
 perejil

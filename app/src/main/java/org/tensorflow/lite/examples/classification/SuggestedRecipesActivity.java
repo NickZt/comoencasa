@@ -44,6 +44,7 @@ public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
         ArrayList<String> ingredients = intentIngredients.getStringArrayListExtra("ingredients");
         Log.v("INGREDIENTS OBTAINED",ingredients.toString());
 
+        ingredients.add("papa");
 
         //Search recipes with ingredients
         //Get or create database
@@ -171,7 +172,7 @@ public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
 
         for (int i=0; i<titlesText.length; i++){
             mCardAdapter.addCardItemS(
-                    new CardItemString(titlesText[i], "calories", "length", 1)
+                    new CardItemString(titlesText[i], recipesCalorie.get(i), recipesTime.get(i), 1)
             );
 
             //DARÍO: AHÍ DEJÉ EL CONSTRUCTOR PARA QUE RECIBA DOS STRINGS (por las dudas) Y UN INT:
@@ -185,7 +186,7 @@ public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
         mViewPager.setOffscreenPageLimit(3);
 
 
-
+        db.close();
 
 
 

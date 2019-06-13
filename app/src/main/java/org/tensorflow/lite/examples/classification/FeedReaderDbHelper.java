@@ -175,11 +175,15 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
     }
 
     public int countRecords(SQLiteDatabase db,String table, String column, String value) {
-        String countQuery = "SELECT  * FROM " + table + " WHERE " +
-                column + " LIKE " + "'" + value + "'";
+        String countQuery = "SELECT  COUNT(*) as c FROM " + table + " WHERE " +
+                column + " = " + "'" + value + "'";
 
         Cursor cursor = db.rawQuery(countQuery, null);
-        int count = cursor.getCount();
+        Integer count = null;
+
+        while(cursor.moveToNext()) {
+            count = cursor.getInt(cursor.getColumnIndexOrThrow("c"));
+        }
         cursor.close();
         return count;
     }
