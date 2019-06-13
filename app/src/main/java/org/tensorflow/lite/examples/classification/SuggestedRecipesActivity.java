@@ -172,7 +172,7 @@ public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
 
         for (int i=0; i<titlesText.length; i++){
             mCardAdapter.addCardItemS(
-                    new CardItemString(titlesText[i], recipesCalorie.get(i), recipesTime.get(i), 1)
+                    new CardItemString(titlesText[i], recipesCalorie.get(i), recipesTime.get(i), R.drawable.food_icon)
             );
 
             //DARÍO: AHÍ DEJÉ EL CONSTRUCTOR PARA QUE RECIBA DOS STRINGS (por las dudas) Y UN INT:
