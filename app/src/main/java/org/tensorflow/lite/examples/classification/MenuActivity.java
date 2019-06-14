@@ -1,10 +1,10 @@
 package org.tensorflow.lite.examples.classification;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -43,10 +43,13 @@ public class MenuActivity extends AppCompatActivity {
             startActivity(i);
         });
 
+
         Button btnRecipes = findViewById(R.id.btnRecipes);
         btnRecipes.setOnClickListener(v -> {
             Intent i = new Intent(MenuActivity.this, RecipesScrollingActivity.class);
             startActivity(i);
         });
+
+
     }
 }

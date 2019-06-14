@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -188,6 +189,10 @@ public class RecipeActivity extends AppCompatActivity {
 
 
         db.close();
+
+
+        ImageView imgRecipe = findViewById(R.id.imgRecipe);
+        imgRecipe.setImageResource(R.drawable.ic_milamburguesa_de_arroz_y_vegetales);
 
     }
 }

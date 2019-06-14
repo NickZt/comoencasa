@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.provider.BaseColumns;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -185,7 +186,20 @@ public class StartActivity extends AppCompatActivity {
         txtRecipeCalories3.setText(recipesCalorie.get(2));
 
 
+
+
+
+
+
+        int resID = getResources().getIdentifier(
+                "ic_" + recipe1.toLowerCase().replace(" ","_") ,
+                "drawable",
+                "org.tensorflow.lite.examples.classification");
+
         ImageView imgRecipe1 = findViewById(R.id.imgRecipe1);
+        imgRecipe1.setImageResource(resID);
+
+        Log.v("RECIPE1",recipe1);
         imgRecipe1.setOnClickListener(view -> {
             Intent intent = new Intent(this, RecipeActivity.class);
             intent.putExtra("recipe",recipe1);
@@ -195,7 +209,15 @@ public class StartActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+
+        resID = getResources().getIdentifier(
+                "ic_" + recipe2.toLowerCase().replace(" ","_").replace("ñ","n") ,
+                "drawable",
+                "org.tensorflow.lite.examples.classification");
+
         ImageView imgRecipe2 = findViewById(R.id.imgRecipe2);
+        imgRecipe2.setImageResource(resID);
+
         imgRecipe2.setOnClickListener(view -> {
             Intent intent = new Intent(this, RecipeActivity.class);
             intent.putExtra("recipe",recipe2);
@@ -203,7 +225,16 @@ public class StartActivity extends AppCompatActivity {
             intent.putExtra("recipe_id",recipesID.get(1).toString());
             startActivity(intent);
         });
+
+
+        resID = getResources().getIdentifier(
+                "ic_" + recipe3.toLowerCase().replace(" ","_") ,
+                "drawable",
+                "org.tensorflow.lite.examples.classification");
+
         ImageView imgRecipe3 = findViewById(R.id.imgRecipe3);
+        imgRecipe3.setImageResource(resID);
+
         imgRecipe3.setOnClickListener(view -> {
             Intent intent = new Intent(this, RecipeActivity.class);
             intent.putExtra("recipe",recipe3);
@@ -213,6 +244,22 @@ public class StartActivity extends AppCompatActivity {
         });
 
         db.close();
+
+
+        TextView btnGroupsMore = findViewById(R.id.btnGroupsMore);
+        btnGroupsMore.setOnClickListener(view -> {
+            Intent intent = new Intent(this, RecipesScrollingActivity.class);
+            startActivity(intent);
+        });
+
+        TextView btnRecipesMore = findViewById(R.id.btnRecipesMore);
+        btnRecipesMore.setOnClickListener(view -> {
+            Intent intent = new Intent(this, RecipesScrollingActivity.class);
+            startActivity(intent);
+        });
+
+
+
 
     }
 }

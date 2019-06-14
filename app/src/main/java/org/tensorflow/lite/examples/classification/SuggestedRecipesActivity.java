@@ -173,12 +173,10 @@ public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
 
         for (int i=0; i<titlesText.length; i++){
             mCardAdapter.addCardItemS(
-                    new RecipeModel(titlesText[i], recipesCalorie.get(i), recipesTime.get(i), R.drawable.food_icon, new Random().nextBoolean())
+                    new RecipeModel(titlesText[i], recipesCalorie.get(i), recipesTime.get(i),
+                            R.drawable.ic_bastoncitos_de_zanahoria, new Random().nextBoolean())
             );
 
-            //DARÍO: AGREGUÉ UN PARÁMETRO QUE ES PARA SABER SI LA RECETA ESTÁ MARCADA COMO FAVORITA.
-            //DARÍO: AGREGUÉ UN PARÁMETRO QUE ES PARA SABER SI LA RECETA ESTÁ MARCADA COMO FAVORITA.
-            //DARÍO: AGREGUÉ UN PARÁMETRO QUE ES PARA SABER SI LA RECETA ESTÁ MARCADA COMO FAVORITA.
         }
 
         mCardShadowTransformer = new ShadowTransformer(mViewPager, mCardAdapter);
@@ -192,5 +190,12 @@ public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
 
 
 
+
     }
+
+
+
+
+
+
 }

@@ -1,5 +1,5 @@
 receta.id	receta.nombre	receta.descripcion	receta.tiempo_de_preparacion	receta.tipo_de_comida
-1	Bastoncitos con mayonesa de zanahoria	Perfectos para compartir en familia.	45	entrada
+1	Bastoncitos de zanahoria	Perfectos para compartir en familia.	45	entrada
 2	Tortitas de zapallito y cebolla	Nutritivas y sabrosas tortitas. Para cualquier momento del dia.	30	entrada
 3	Papas sorpresa	¡Una forma más divertida de comer! ¿Por que comer solo una papa, si podes ponerle deliciosos vegetales asados?	60	entrada
 4	Pasta al brócoli	Una forma mas nutritiva de comer pasta	40	principal
@@ -8,7 +8,7 @@ receta.id	receta.nombre	receta.descripcion	receta.tiempo_de_preparacion	receta.t
 7	Helado rápido de banana	Saludable, rapido ¡y con los ingredientes que tenes en tu casa!	15	postre
 8	Gelatina frutal	Un giro para la clásica y aburrida gelatina. ¡Ahora llena de vitaminas y minerales!	20	postre
 9	Paletas frutales	Excelente forma de refrescarse en verano ¡mientras incorporamos de vitaminas!	20	postre
-10	Veggie Nuggets 	Perfectos para una merienda salada, estos Nuggets con zanahoria y brócoli, ¡vienen a revolucionar tu forma de comer vegetales!	40	entrada
+10	Veggie Nuggets	Perfectos para una merienda salada, estos Nuggets con zanahoria y brócoli, ¡vienen a revolucionar tu forma de comer vegetales!	40	entrada
 11	Pinchos Caprese	Faciles y rapidos, perfectos para cualquier reunion familiar.	5	entrada
 12	Tomates rellenos	Frescos y saludables, estos tomatesrellenos con arroz y atun, ¡te van a encantar!	45	entrada
 13	Librito de papa y zanahoria	Sencillo plato con los ingredientes que tenes en tu casa.	45	entrada
