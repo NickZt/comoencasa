@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="70dp"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="4dp"
+    android:layout_marginLeft="4dp">
+
+    <ToggleButton
+        android:id="@+id/btnfavorite"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/toggle_favorite_black_border"
+        android:checked="false"
+        android:text=""
+        android:textOff=""
+        android:textOn="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+        <ImageView
+            android:id="@+id/imgRecipe"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/food_icon" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Sopa de berenjena"
+            android:textColor="#707070"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtRecipeLength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:drawableLeft="@drawable/schedule_icon"
+            android:text="  60 min"
+            android:textColor="#707070"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtRecipeCalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:drawableLeft="@drawable/calorias_icon"
+            android:text="  457 cal."
+            android:textColor="#707070"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+</RelativeLayout>

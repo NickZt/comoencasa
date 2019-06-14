@@ -1,9 +1,6 @@
 package org.tensorflow.lite.examples.classification.utils;
 
-import android.content.Context;
 import android.view.View;
-import android.widget.Toast;
-
 import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.ViewPager;
 

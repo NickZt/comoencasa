@@ -12,12 +12,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.viewpager.widget.ViewPager;
 
-import org.tensorflow.lite.examples.classification.adapters.CardItemString;
+import org.tensorflow.lite.examples.classification.adapters.RecipeModel;
 import org.tensorflow.lite.examples.classification.adapters.CardPagerAdapters;
 import org.tensorflow.lite.examples.classification.utils.ShadowTransformer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
 
@@ -172,11 +173,12 @@ public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
 
         for (int i=0; i<titlesText.length; i++){
             mCardAdapter.addCardItemS(
-                    new CardItemString(titlesText[i], recipesCalorie.get(i), recipesTime.get(i), R.drawable.food_icon)
+                    new RecipeModel(titlesText[i], recipesCalorie.get(i), recipesTime.get(i), R.drawable.food_icon, new Random().nextBoolean())
             );
 
-            //DARÍO: AHÍ DEJÉ EL CONSTRUCTOR PARA QUE RECIBA DOS STRINGS (por las dudas) Y UN INT:
-            //Calorías, duración y el int del id de recurso del drawable correspondiente.
+            //DARÍO: AGREGUÉ UN PARÁMETRO QUE ES PARA SABER SI LA RECETA ESTÁ MARCADA COMO FAVORITA.
+            //DARÍO: AGREGUÉ UN PARÁMETRO QUE ES PARA SABER SI LA RECETA ESTÁ MARCADA COMO FAVORITA.
+            //DARÍO: AGREGUÉ UN PARÁMETRO QUE ES PARA SABER SI LA RECETA ESTÁ MARCADA COMO FAVORITA.
         }
 
         mCardShadowTransformer = new ShadowTransformer(mViewPager, mCardAdapter);

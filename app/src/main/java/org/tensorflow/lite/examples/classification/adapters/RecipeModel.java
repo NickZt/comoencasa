@@ -1,17 +1,19 @@
 package org.tensorflow.lite.examples.classification.adapters;
 
-public class CardItemString {
+public class RecipeModel {
 
     private String mTitleResource;
     private String mCaloriesResource;
     private String mLengthResource;
     private int mPhotoResource;
+    private boolean mFavoriteResource;
 
-    public CardItemString(String title, String calories, String length, int photo) {
+    public RecipeModel(String title, String calories, String length, int photo, boolean isFavorite) {
         mTitleResource = title;
         mCaloriesResource = calories;
         mLengthResource = length;
         mPhotoResource =  photo;
+        mFavoriteResource = isFavorite;
     }
 
     public String getTitle() {
@@ -26,7 +28,7 @@ public class CardItemString {
         return mLengthResource;
     }
 
-    public int getPhoto() {
-        return mPhotoResource;
-    }
+    public int getPhoto() { return mPhotoResource; }
+
+    public boolean getFavorite() { return mFavoriteResource; }
 }

@@ -43,5 +43,10 @@ public class MenuActivity extends AppCompatActivity {
             startActivity(i);
         });
 
+        Button btnRecipes = findViewById(R.id.btnRecipes);
+        btnRecipes.setOnClickListener(v -> {
+            Intent i = new Intent(MenuActivity.this, RecipesScrollingActivity.class);
+            startActivity(i);
+        });
     }
 }

@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".NutritionalInfoActivity"></activity>
+        <activity android:name=".RecipesScrollingActivity"></activity>
+        <activity android:name=".NutritionalInfoActivity" />
         <activity android:name=".MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,14 +25,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SuggestedRecipesActivity"></activity>
+        <activity android:name=".SuggestedRecipesActivity" />
         <activity android:name=".PresentationActivity" />
         <activity
             android:name=".FoodsFoundCameraActivity"
             android:label="@string/title_activity_foods_found_camera"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".RecipeActivity" />
-        <activity android:name=".StartActivity"></activity>
+        <activity android:name=".StartActivity" />
         <activity
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling"

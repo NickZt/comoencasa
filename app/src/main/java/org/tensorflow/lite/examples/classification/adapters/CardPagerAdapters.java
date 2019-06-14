@@ -19,7 +19,7 @@ import java.util.List;
 public class CardPagerAdapters extends PagerAdapter implements CardAdapter {
 
     private List<CardView> mViews;
-    private List<CardItemString> mData;
+    private List<RecipeModel> mData;
     private float mBaseElevation;
 
     public CardPagerAdapters() {
@@ -27,7 +27,7 @@ public class CardPagerAdapters extends PagerAdapter implements CardAdapter {
         mViews = new ArrayList<>();
     }
 
-    public void addCardItemS(CardItemString item) {
+    public void addCardItemS(RecipeModel item) {
         mViews.add(null);
         mData.add(item);
     }
@@ -79,7 +79,7 @@ public class CardPagerAdapters extends PagerAdapter implements CardAdapter {
         mViews.set(position, null);
     }
 
-    private void bind(CardItemString item, View view) {
+    private void bind(RecipeModel item, View view) {
         TextView titleTextView = view.findViewById(R.id.txtTitle);
         TextView caloriesTextView = view.findViewById(R.id.txtRecipeCalories);
         TextView lengthTextView = view.findViewById(R.id.txtRecipeLength);

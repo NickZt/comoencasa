@@ -48,7 +48,16 @@
         android:id="@+id/btnNutritionalInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:background="@color/darkish_green"
         android:backgroundTint="@color/darkish_green"
         android:text="Nutritional information" />
+
+    <Button
+        android:id="@+id/btnRecipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkish_green"
+        android:backgroundTint="@color/darkish_green"
+        android:text="Galería de recetas" />
 </LinearLayout>
