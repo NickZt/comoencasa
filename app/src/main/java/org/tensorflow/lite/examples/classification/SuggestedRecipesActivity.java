@@ -172,9 +172,18 @@ public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
         titlesText = Arrays.copyOf(recipesName.toArray(), recipesName.toArray().length, String[].class);
 
         for (int i=0; i<titlesText.length; i++){
+
+            int resID = getResources().getIdentifier(
+                    "ic_" + recipesName.get(i).toLowerCase().replace(" ","_").
+                            replace("á","a").
+                            replace("ó","o").
+                            replace("ñ","n") ,
+                    "drawable",
+                    "org.tensorflow.lite.examples.classification");
+
             mCardAdapter.addCardItemS(
                     new RecipeModel(titlesText[i], recipesCalorie.get(i), recipesTime.get(i),
-                            R.drawable.ic_bastoncitos_de_zanahoria, new Random().nextBoolean())
+                            resID, new Random().nextBoolean())
             );
 
         }

@@ -1,5 +1,6 @@
 package org.tensorflow.lite.examples.classification;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.tensorflow.lite.examples.classification.adapters.RecipeModel;
 import org.tensorflow.lite.examples.classification.adapters.RecipesAdapter;
@@ -328,7 +331,8 @@ public class RecipesScrollingActivity extends AppCompatActivity {
 
         for(int i = 0; i < Objects.requireNonNull(recipesName2.toArray()).length; i++) {
             int resID = getResources().getIdentifier(
-                    "ic_" + recipesName2.get(i).toLowerCase().replace(" ","_") ,
+                    "ic_" + recipesName2.get(i).toLowerCase().replace(" ","_").
+                            replace("ó","o") ,
                     "drawable",
                     "org.tensorflow.lite.examples.classification");
 
@@ -343,7 +347,8 @@ public class RecipesScrollingActivity extends AppCompatActivity {
         }
         for(int i = 0; i < Objects.requireNonNull(recipesName3.toArray()).length; i++) {
             int resID = getResources().getIdentifier(
-                    "ic_" + recipesName3.get(i).toLowerCase().replace(" ","_") ,
+                    "ic_" + recipesName3.get(i).toLowerCase().replace(" ","_").
+                            replace("á","a") ,
                     "drawable",
                     "org.tensorflow.lite.examples.classification");
 
@@ -371,5 +376,22 @@ public class RecipesScrollingActivity extends AppCompatActivity {
         mListDesserts.setAdapter(mAdapterDesserts);
         mListDesserts.setLayoutManager(
                 new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+
+        FloatingActionButton fab = findViewById(R.id.fbtnCamera);
+        fab.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ClassifierActivity.class);
+            startActivity(intent);
+        });
+
+
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this, ClassifierActivity.class);
+        startActivity(intent);
+
     }
 }

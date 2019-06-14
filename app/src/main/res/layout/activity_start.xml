@@ -83,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/entradas_icon" />
+                    app:srcCompat="@drawable/ic_papas_sorpresa" />
 
                 <TextView
                     android:id="@+id/txtGroupName1"
@@ -118,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/entradas_icon" />
+                    app:srcCompat="@drawable/ic_risotto_multicolor" />
 
                 <TextView
                     android:id="@+id/txtGroupName2"
@@ -153,7 +153,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/entradas_icon" />
+                    app:srcCompat="@drawable/ic_helado_de_yogur_y_frutos_rojos" />
 
                 <TextView
                     android:id="@+id/txtGroupName3"
