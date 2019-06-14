@@ -30,6 +30,8 @@ import android.util.Size;
 import android.util.TypedValue;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import org.tensorflow.lite.examples.classification.env.BorderedText;
 import org.tensorflow.lite.examples.classification.env.ImageUtils;
 import org.tensorflow.lite.examples.classification.env.Logger;
@@ -121,7 +123,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
   @Override
   protected void processImage() {
 
-      Button ButtonFindRecipes = findViewById(R.id.ButtonFindRecipes);
+      FloatingActionButton ButtonFindRecipes = findViewById(R.id.ButtonFindRecipes);
 
       /*
       if (results != null && results.size() >= 1) {
