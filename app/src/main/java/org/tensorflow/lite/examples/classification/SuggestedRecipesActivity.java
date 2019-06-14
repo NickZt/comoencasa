@@ -45,7 +45,7 @@ public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
         ArrayList<String> ingredients = intentIngredients.getStringArrayListExtra("ingredients");
         Log.v("INGREDIENTS OBTAINED",ingredients.toString());
 
-        ingredients.add("papa");
+        //ingredients.add("papa");
 
         //Search recipes with ingredients
         //Get or create database
