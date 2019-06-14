@@ -202,9 +202,9 @@ public class SuggestedRecipesActivity<ingredients> extends AppCompatActivity {
 
     }
 
-
-
-
-
-
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, StartActivity.class);
+        startActivity(intent);
+    }
 }
