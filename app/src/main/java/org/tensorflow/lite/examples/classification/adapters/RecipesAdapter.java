@@ -37,6 +37,11 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipesV
         holder.txtLength.setText(mDataset.get(position).getLength());
         holder.imgRecipe.setImageResource(mDataset.get(position).getPhoto());
         holder.btnFavorite.setChecked(mDataset.get(position).getFavorite());
+
+        holder.imgRecipe.setOnClickListener(v ->
+        {
+            // Darío: Agregar lógica para redirigir a pantalla de receta.
+        });
     }
 
     @Override

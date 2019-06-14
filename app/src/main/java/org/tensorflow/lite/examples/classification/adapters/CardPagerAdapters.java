@@ -68,6 +68,11 @@ public class CardPagerAdapters extends PagerAdapter implements CardAdapter {
             mBaseElevation = cardView.getCardElevation();
         }
 
+        cardView.setOnClickListener(v ->
+        {
+            // Darío: Agregar lógica para redirigir a pantalla de receta.
+        });
+
         cardView.setMaxCardElevation(mBaseElevation * MAX_ELEVATION_FACTOR);
         mViews.set(position, cardView);
         return view;
