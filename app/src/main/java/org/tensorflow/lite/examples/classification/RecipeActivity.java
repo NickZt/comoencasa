@@ -192,7 +192,15 @@ public class RecipeActivity extends AppCompatActivity {
 
 
         ImageView imgRecipe = findViewById(R.id.imgRecipe);
-        imgRecipe.setImageResource(R.drawable.ic_milamburguesa_de_arroz_y_vegetales);
+        int resID = getResources().getIdentifier(
+                "ic_" + recipe.toLowerCase().replace(" ","_").
+                        replace("á","a").
+                        replace("ó","o").
+                        replace("ñ","n") ,
+                "drawable",
+                "org.tensorflow.lite.examples.classification");
+
+        imgRecipe.setImageResource(resID);
 
     }
 }

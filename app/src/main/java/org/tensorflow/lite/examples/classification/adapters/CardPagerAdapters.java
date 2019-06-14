@@ -1,5 +1,6 @@
 package org.tensorflow.lite.examples.classification.adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.PagerAdapter;
 
 import org.tensorflow.lite.examples.classification.R;
+import org.tensorflow.lite.examples.classification.RecipeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,6 +73,12 @@ public class CardPagerAdapters extends PagerAdapter implements CardAdapter {
         cardView.setOnClickListener(v ->
         {
             // Darío: Agregar lógica para redirigir a pantalla de receta.
+
+            Intent intent = new Intent(v.getContext(), RecipeActivity.class);
+            intent.putExtra("recipe",mData.get(position).getTitle());
+            intent.putExtra("recipe_calorie",mData.get(position).getCalories());
+
+            v.getContext().startActivity(intent);
         });
 
         cardView.setMaxCardElevation(mBaseElevation * MAX_ELEVATION_FACTOR);

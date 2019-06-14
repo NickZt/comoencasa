@@ -1,6 +1,7 @@
 package org.tensorflow.lite.examples.classification.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.ToggleButton;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.tensorflow.lite.examples.classification.R;
+import org.tensorflow.lite.examples.classification.RecipeActivity;
 
 import java.util.ArrayList;
 
@@ -41,6 +43,13 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipesV
         holder.imgRecipe.setOnClickListener(v ->
         {
             // Darío: Agregar lógica para redirigir a pantalla de receta.
+
+            Intent intent = new Intent(v.getContext(), RecipeActivity.class);
+            intent.putExtra("recipe",mDataset.get(position).getTitle());
+            intent.putExtra("recipe_calorie",mDataset.get(position).getCalories());
+
+            v.getContext().startActivity(intent);
+
         });
     }
 
