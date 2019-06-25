@@ -541,11 +541,12 @@ public abstract class CameraActivity extends AppCompatActivity
       Recognition recognitionS1 = results.get(0);
       if (recognitionS1 != null) {
         if (!ingredients.contains(recognitionS1.getTitle()) && recognitionS1.getTitle() != null &&
-                recognitionS1.getConfidence() > 0.5) {
+                recognitionS1.getConfidence() > 0.75) {
             ingredient = recognitionS1.getTitle();
             ingredients.add(ingredient);
 
-            Chip chip = (Chip)inflater.inflate(R.layout.food_chip_item, null, false);
+
+          Chip chip = (Chip)inflater.inflate(R.layout.food_chip_item, null, false);
             chip.setText(ingredient);
             chip.setOnCloseIconClickListener(v -> {
               ingredients.remove((String) chip.getText());

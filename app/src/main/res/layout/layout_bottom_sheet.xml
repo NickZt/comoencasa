@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/bottom_sheet_layout"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
+    android:layout_height="280dp"
     android:layout_gravity="center_horizontal"
     android:background="@drawable/bottom_sheet_bg"
     android:gravity="center_horizontal"
@@ -55,7 +55,7 @@
             android:clickable="true"
             android:focusable="true"
             app:backgroundTint="#2BE232"
-            app:srcCompat="@drawable/chef_hat"/>
+            app:srcCompat="@drawable/chef_hat" />
 
     </RelativeLayout>
 
